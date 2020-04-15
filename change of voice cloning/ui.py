@@ -34,8 +34,7 @@ colormap = np.array([
     [76, 255, 0],
 ], dtype=np.float) / 255 
 
-#change0414===============================================================================
-fp=open(r'C:\\Users\\howar\\Desktop\\Real-Time-Voice-Cloning-master\\chatbot-rnn-master\\test.txt')
+fp=open(r'C:\\Real-Time-Voice-Cloning\\chatbot-rnn-master\\test.txt')
 default_text = fp.readline()
 fp.close()
 
@@ -172,13 +171,14 @@ class UI(QDialog):
     @property
     def current_utterance_name(self):
         return self.utterance_box.currentText()
-    
+    #####################################
+    ##########################################
+    #########################################
+    ##########################
+    #0415by Hung
     def browse_file(self):
-        fpath = QFileDialog().getOpenFileName(
-            parent=self,
-            caption="Select an audio file",
-            filter="Audio Files (*.mp3 *.flac *.wav *.m4a)"
-        )
+        #('C:/Real-Time-Voice-Cloning/sample.wav', 'Audio Files (*.mp3 *.flac *.wav *.m4a)')
+        fpath = ('C:/Real-Time-Voice-Cloning/sample.wav', 'Audio Files (*.mp3 *.flac *.wav *.m4a)')
         return Path(fpath[0]) if fpath[0] != "" else ""
     
     @staticmethod
